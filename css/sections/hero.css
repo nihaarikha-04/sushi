@@ -1,0 +1,175 @@
+.hero {
+  display: flex;
+  min-height: calc(100vh - 74px); /* calculating the size of the image by using calc function where 100vh is the vertical size of the page and 74px is the height of the navigation bar */
+  overflow: hidden /* content is clipped and no scrolling mechanism should be provided to view the content outside the clipping region */
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  z-index: 5; /* to appear on top of the other elements like layering in canva */
+}
+
+.hero-image img {
+  width: 120%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-image__overlay {
+  position: absolute; /* not related to other elements */
+  inset: 0; /* for inset 0 there will be no space between the absolutely positioned element and the containing block edges */
+  width: 100%;
+
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero-image h2 {
+  position: absolute;
+  bottom: 0; /* it will appear at the bottom */
+  padding: 20px;
+
+  font-family: var(--playfair-display);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 138px;
+  color: #fff;
+}
+
+.hero-content {
+  flex: 1.22; /* space for the other half content */
+  display: flex; /* arranges the elements in a row */
+  justify-content: space-between;
+  flex-direction: column; /* will make the elements appear one below the other */
+}
+
+.hero-content-info { /* for all the text and the buttom to be placed at the center */
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-content-info h1 { /* targeting the h1 element */
+  font-size: 80px;
+  font-weight:600px;
+  font-family: var(--playfiar-display);
+  color: var(--secondary-color);
+}
+
+.hero-content-info p {
+  margin: 32px 0 0 32px; /* 32 on the top and bottom and 0 on both left and right */
+
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero-content__buttons {
+  margin: 41px 0 0 41px;
+
+  display: flex;
+  flex-wrap: wrap; /* wraps one below another if there is no space */
+  gap: 36px;
+}
+
+.hero-content__order-button {
+  padding: 20px;
+  border-radius: 36px;
+  min-width: 212px;
+  outline: none;
+  border: none;
+  background: var(--secondary-color);
+
+  cursor: pointer; /* to make it clickable */
+
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hero-content__play-button {
+  border: none;
+  outline: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--black-200);
+  font-family: var(--plus-jakarta-sans);
+
+  cursor: pointer;
+}
+
+.hero-content__play-button img {
+  margin-right: 12px;
+
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.hero-content__testimonial {
+  padding: 32px 64px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  background: var(--color-white);
+}
+
+.hero-content__customer {
+  flex: 1;
+  gap: 10px;
+}
+
+.hero-content__customer h4 {
+  font-size: 62px;
+  font-weight: 400;
+  font-family: var(--playfair-display);
+}
+
+.hero-content__customer p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.hero-content__review {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-left: 20px;
+  border-left: 1px solid rgba(2, 2, 2, 0.1);
+  min-width: 200px;
+}
+
+.hero-content__review img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.hero-content__review p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  opacity: 0.8;
+}

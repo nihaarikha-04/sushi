@@ -1,0 +1,73 @@
+.about-us {
+  display: flex;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.about-us__image {
+  flex: 1; /* takes majority of the space */
+  display: flex;
+  flex-direction: column; /* to bring both the sushis one below the other */
+  justify-content: center;
+  background: var(--color-white);
+  position: relative;
+}
+
+.about-us__image div {
+  padding: 32px 64px; /* 32px on top and bottom and 64px on left and right*/
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about-us__image-sushi3 {
+  border-bottom: 8px solid var(--color-crimson);
+  background-image: url("../../assets/about_bg1.png"); /* to bring the rext behind the top sushi */
+}
+
+.about-us__image-sushi2 {
+  background-image: url("../../assets/about_bg2.png"); /* to bring the rext behind the bottom sushi */
+}
+
+.about-us__image-sushi3 img {
+  width: 225px;
+  height: 200px;
+}
+
+.about-us__image-sushi2 img {
+  width: 240px;
+  height: 160px;
+}
+
+.about-us__button {
+  position: absolute; /* does not care about the rest of the items around it */
+  right: 0;
+  padding: 12px 32px;
+  min-height: 64px;
+  background: var(--secondary-color);
+  border-radius: 32px 0 0 32px; /* 32px on left and right and 0px on top and bottom */
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.about-us__button img {
+  object-fit: contain;
+  margin-left: 32px; /* to get a gap between learn more and arrow */
+}
+
+.about-us__content {
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
